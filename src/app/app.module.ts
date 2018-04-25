@@ -1,3 +1,4 @@
+import { ProductComponent } from './pages/product/product.component';
 import { MatDynamicFormArrayComponent } from './formizable/components/mat-dynamic-form-array/mat-dynamic-form-array.component';
 import { MatDynamicFormGroupComponent } from './formizable/components/mat-dynamic-form-group/mat-dynamic-form-group.component';
 import { ParseInterceptor } from './helpers/parse.interceptor';
@@ -39,6 +40,7 @@ import { FormizableFormComponent } from './formizable/components/formizable-form
 import { JsonPublicPipe } from './shared/pipes/json-public';
 import { EcoFabSpeedDialModule } from '@ecodev/fab-speed-dial';
 import { MatDynamicFormQuestionComponent } from './formizable/components/mat-dynamic-form-question/mat-dynamic-form-question.component';
+import { ProductService } from './services/product.service';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     ProfileComponent,
     AboutComponent,
+    ProductComponent,
     TemplateFormExampleComponent,
     ReactiveFormExampleComponent,
     DynamicFormExampleComponent,
@@ -102,6 +105,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         useClass: ParseInterceptor,
         multi: true
     },
+    ProductService,
     QuestionControlService,
     DynamicFormExampleService,
   ],

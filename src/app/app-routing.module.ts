@@ -1,3 +1,4 @@
+import { ProductComponent } from './pages/product/product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]  },
+  { path: 'products', component: ProductComponent, canActivate: [AuthGuard]  },
   { path: 'template-form-example', component: TemplateFormExampleComponent },
   { path: 'reactive-form-example', component: ReactiveFormExampleComponent },
   { path: 'dynamic-form-example', component: DynamicFormExampleComponent },
