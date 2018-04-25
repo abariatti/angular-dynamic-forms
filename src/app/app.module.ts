@@ -19,7 +19,6 @@ import { environment } from '../environments/environment';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TemplateFormExampleComponent } from './pages/template-form-example/template-form-example.component';
 import { PhoneNumberValidatorDirective } from './shared/validators/phone-number.directive';
-import { ReactiveFormExampleComponent } from './pages/reactive-form-example/reactive-form-example.component';
 import { HttpModule } from '@angular/http';
 import { AlertService } from './services/alert.service';
 import { AuthenticationService } from './services/authentication.service';
@@ -47,7 +46,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AboutComponent,
     ProductComponent,
     TemplateFormExampleComponent,
-    ReactiveFormExampleComponent,
   ],
   imports: [
     BrowserModule,

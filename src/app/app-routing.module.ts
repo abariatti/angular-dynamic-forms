@@ -5,7 +5,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TemplateFormExampleComponent } from './pages/template-form-example/template-form-example.component';
-import { ReactiveFormExampleComponent } from './pages/reactive-form-example/reactive-form-example.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]  },
   { path: 'products', component: ProductComponent, canActivate: [AuthGuard]  },
   { path: 'template-form-example', component: TemplateFormExampleComponent },
-  { path: 'reactive-form-example', component: ReactiveFormExampleComponent },
 ];
 
 @NgModule({
