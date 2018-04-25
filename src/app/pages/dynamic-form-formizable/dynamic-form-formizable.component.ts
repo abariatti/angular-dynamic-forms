@@ -9,11 +9,11 @@ import { Place } from '../../models/place';
 import { Note } from '../../models/note';
 
 @Component({
-  selector: 'app-dynamic-form-example-3',
-  templateUrl: './dynamic-form-example-3.component.html',
-  styleUrls: ['./dynamic-form-example-3.component.scss']
+  selector: 'app-dynamic-form-formizable',
+  templateUrl: './dynamic-form-formizable.component.html',
+  styleUrls: ['./dynamic-form-formizable.component.scss']
 })
-export class DynamicFormExample3Component implements OnInit {
+export class DynamicFormFormizableComponent implements OnInit {
   questions: QuestionBase<any>[];
   createModel: IFormizable;
   missions: Mission[] = [];

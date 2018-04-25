@@ -35,7 +35,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { LoginComponent } from './pages/login/login.component';
 import { QuestionGeneratorComponent } from './pages/dynamic-form-generator/question-generator/question-generator.component';
 import { AuthGuard } from './guards/auth.guard';
-import { DynamicFormExample3Component } from './pages/dynamic-form-example-3/dynamic-form-example-3.component';
+import { DynamicFormFormizableComponent } from './pages/dynamic-form-formizable/dynamic-form-formizable.component';
 import { FormizableFormComponent } from './formizable/components/formizable-form/formizable-form.component';
 import { JsonPublicPipe } from './shared/pipes/json-public';
 import { EcoFabSpeedDialModule } from '@ecodev/fab-speed-dial';
@@ -64,7 +64,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DynamicFormExampleComponent,
     DynamicFormExample1Component,
     DynamicFormExample2Component,
-    DynamicFormExample3Component,
+    DynamicFormFormizableComponent,
     // dynamic form question component
     MatDynamicFormArrayComponent,
     MatDynamicFormComponent,

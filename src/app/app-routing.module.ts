@@ -12,7 +12,7 @@ import { DynamicFormExample1Component } from './pages/dynamic-form-example-1/dyn
 import { DynamicFormGeneratorComponent } from './pages/dynamic-form-generator/dynamic-form-generator.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
-import { DynamicFormExample3Component } from './pages/dynamic-form-example-3/dynamic-form-example-3.component';
+import { DynamicFormFormizableComponent } from './pages/dynamic-form-formizable/dynamic-form-formizable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'dynamic-form-example', component: DynamicFormExampleComponent },
   { path: 'dynamic-form-example-1', component: DynamicFormExample1Component },
   { path: 'dynamic-form-example-2', component: DynamicFormExample2Component },
-  { path: 'dynamic-form-example-3', component: DynamicFormExample3Component },
+  { path: 'dynamic-form-formizable', component: DynamicFormFormizableComponent },
   { path: 'dynamic-form-generator', component: DynamicFormGeneratorComponent },
 ];
 
