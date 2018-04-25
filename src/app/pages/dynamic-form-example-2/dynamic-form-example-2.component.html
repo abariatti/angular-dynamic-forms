@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutGap="10px">
+
+  <mat-card>
+    <mat-card-title color="primary">Dynamically on change Person Form Example</mat-card-title>
+    <mat-card-content>
+
+      <mat-form-field>
+        <mat-select placeholder="Type of contact?" required (change)="onTypeOfContactChange($event.value)">
+          <mat-option value="employee">Employee</mat-option>
+          <mat-option value="person">Person</mat-option>
+          <mat-option value="provider">Provider</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>
+        <p>
+          <app-mat-dynamic-form submitText="Add" [questions]="questions" (submit)="onFormSubmit($event)"></app-mat-dynamic-form>
+        </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

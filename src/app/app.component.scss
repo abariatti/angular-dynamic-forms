@@ -1,0 +1,12 @@
+.main-container {
+    padding: 25px;
+    overflow: auto;
+}
+
+mat-list-item.active {
+    background: rgba(0,0,0,0.2) !important;
+}
+
+.mat-drawer-container {
+  overflow: inherit;
+}

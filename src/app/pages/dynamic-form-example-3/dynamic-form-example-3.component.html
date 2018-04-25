@@ -1,0 +1,99 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+  <mat-card>
+    <mat-card-title color="primary">Awesome Mission Control Board</mat-card-title>
+    <mat-card-content>
+      <mat-list>
+
+        <h3 mat-subheader>
+          <span>Missions</span>
+          <span class="header-spacer"></span>
+          <mat-icon>start</mat-icon>
+        </h3>
+        <mat-list-item *ngFor="let mission of missions" (click)="edit(mission)">
+          <mat-icon mat-list-icon>folder</mat-icon>
+          <h4 mat-line>{{mission.name}}</h4>
+          <p mat-line> {{mission.startDate | date}} </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <h3 mat-subheader>
+          <span>Notes</span>
+          <span class="header-spacer"></span>
+          <mat-icon>event_note</mat-icon>
+        </h3>
+        <mat-list-item *ngFor="let note of notes" (click)="edit(note)">
+          <mat-icon mat-list-icon>note</mat-icon>
+          <h4 mat-line>{{note.title}}</h4>
+          <p mat-line> {{note.done }} </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <h3 mat-subheader>
+          <span>Astronautes</span>
+          <span class="header-spacer"></span>
+          <mat-icon>person</mat-icon>
+        </h3>
+        <mat-list-item *ngFor="let expense of expenses">
+          <mat-icon mat-list-icon> </mat-icon>
+          <h4 mat-line>{{expense.name}}</h4>
+          <p mat-line> {{expense.updated | date}} </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <h3 mat-subheader>
+          <span>Places</span>
+          <span class="header-spacer"></span>
+          <mat-icon>place</mat-icon>
+        </h3>
+        <mat-list-item *ngFor="let place of places"  (click)="edit(place)">
+          <mat-icon mat-list-icon>place</mat-icon>
+          <h4 mat-line>{{place.place}}</h4>
+          <p mat-line> {{place.type.value }} </p>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <eco-fab-speed-dial #myFab (mouseenter)="myFab.open = true" (mouseleave)="myFab.open = false" [(open)]="open" [direction]="direction"
+        [animationMode]="animationMode" [fixed]="fixed">
+
+        <eco-fab-speed-dial-trigger [spin]="spin">
+          <button mat-fab>
+            <mat-icon>add</mat-icon>
+          </button>
+        </eco-fab-speed-dial-trigger>
+
+        <eco-fab-speed-dial-actions>
+          <button mat-mini-fab (click)="create('place')">
+            <mat-icon>place</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="create('astronaute')">
+            <mat-icon>person</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="create('note')">
+            <mat-icon>event_note</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="create('mission')">
+            <mat-icon>star</mat-icon>
+          </button>
+        </eco-fab-speed-dial-actions>
+
+      </eco-fab-speed-dial>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title color="primary">Dynamic Formizable Form Example</mat-card-title>
+    <mat-card-subtitle *ngIf="createModel">
+      Editing a {{ createModel.getTypeName() }}
+    </mat-card-subtitle>
+    <mat-card-content>
+      <div>
+        <p>
+          <app-formizable-form submitText="Save" [(model)]="createModel" (submit)="onSubmit($event)"></app-formizable-form>
+        </p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

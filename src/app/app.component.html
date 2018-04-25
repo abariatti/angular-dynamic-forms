@@ -1,0 +1,85 @@
+<mat-toolbar color="primary">
+
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>{{ 'TITLE' | translate }}</span>
+
+  <span fxFlex></span>
+
+  <theme-picker (setStyle)="onSetStyle($event)"></theme-picker>
+
+  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+
+  <mat-menu #themeMenu x-position="after">
+    <button routerLink="/profile" mat-menu-item>Profile</button>
+    <button routerLink="/login" mat-menu-item>Logout</button>
+  </mat-menu>
+
+</mat-toolbar>
+
+<mat-sidenav-container fxLayout="row" fxFlex>
+
+  <mat-sidenav #snav mode="push" closed>
+
+    <mat-nav-list>
+
+      <mat-list-item routerLink="/home" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        <span>{{'PAGES.HOME.MENU' | translate }} </span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/template-form-example" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Template form </span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/reactive-form-example" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Reactive form </span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/dynamic-form-example" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Dynamic form </span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/dynamic-form-example-1" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Dynamic form 1</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/dynamic-form-example-2" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Dynamic form 2</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/dynamic-form-example-3" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Dynamic form 3</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/dynamic-form-generator" routerLinkActive="active">
+        <mat-icon></mat-icon>
+        <span>Dynamic form generator</span>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/about" routerLinkActive="active">
+        <mat-icon>help</mat-icon>
+        <span>about </span>
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

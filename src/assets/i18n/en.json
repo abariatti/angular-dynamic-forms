@@ -1,0 +1,9 @@
+{
+    "TITLE": "Angular Dynamic Forms",
+    "PAGES": {
+        "HOME": {
+            "MENU": "Home",
+            "CONTENT": "Home works!"
+        }
+    }
+}
