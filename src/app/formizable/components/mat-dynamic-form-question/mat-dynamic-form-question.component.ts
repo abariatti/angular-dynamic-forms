@@ -20,7 +20,7 @@ export class MatDynamicFormQuestionComponent implements OnInit {
   public maxLength = MAX_LENGTH;
 
   ngOnInit() {
-    // console.log(this.question);
+    console.log(this.question);
   }
 
   getFormGroup(name) {

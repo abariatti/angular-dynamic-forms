@@ -6,13 +6,13 @@
     <ng-container *ngIf="!question.textArea">
       <input matInput #input [formControlName]="question.key" [id]="question.key" [required]="question.required" [placeholder]="question.label"
       [maxLength]="question.maxLength || maxLength" [value]="question.value || ''">
+      <mat-hint align="end" *ngIf="question.maxLength">{{input.value?.length || 0}}/{{question.maxLength}}</mat-hint>
     </ng-container>
     <ng-container *ngIf="question.textArea">
       <textarea matInput #input [formControlName]="question.key" [id]="question.key" [required]="question.required" [placeholder]="question.label"
         matTextareaAutosize matAutosizeMinRows="3"
       [maxLength]="question.maxLength || maxLength" [value]="question.value || ''"></textarea>
     </ng-container>
-    <mat-hint align="end" *ngIf="question.maxLength">{{input.value?.length || 0}}/{{question.maxLength}}</mat-hint>
     <mat-error *ngIf="!isValid">
       {{ question.validationMessage }}
     </mat-error>
