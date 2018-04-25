@@ -1,6 +1,4 @@
 import { ProductComponent } from './pages/product/product.component';
-import { MatDynamicFormArrayComponent } from './formizable/components/mat-dynamic-form-array/mat-dynamic-form-array.component';
-import { MatDynamicFormGroupComponent } from './formizable/components/mat-dynamic-form-group/mat-dynamic-form-group.component';
 import { ParseInterceptor } from './helpers/parse.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,24 +20,13 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 import { TemplateFormExampleComponent } from './pages/template-form-example/template-form-example.component';
 import { PhoneNumberValidatorDirective } from './shared/validators/phone-number.directive';
 import { ReactiveFormExampleComponent } from './pages/reactive-form-example/reactive-form-example.component';
-import { DynamicFormExampleService } from './pages/dynamic-form-example/dynamic-form-example.service';
-import { DynamicFormExampleComponent } from './pages/dynamic-form-example/dynamic-form-example.component';
-import { MatDynamicFormComponent } from './formizable/components/mat-dynamic-form/mat-dynamic-form.component';
-import { QuestionControlService } from './formizable/question/question-control.service';
-import { DynamicFormExample2Component } from './pages/dynamic-form-example-2/dynamic-form-example-2.component';
-import { DynamicFormExample1Component } from './pages/dynamic-form-example-1/dynamic-form-example-1.component';
-import { DynamicFormGeneratorComponent } from './pages/dynamic-form-generator/dynamic-form-generator.component';
 import { HttpModule } from '@angular/http';
 import { AlertService } from './services/alert.service';
 import { AuthenticationService } from './services/authentication.service';
 import { LoginComponent } from './pages/login/login.component';
-import { QuestionGeneratorComponent } from './pages/dynamic-form-generator/question-generator/question-generator.component';
 import { AuthGuard } from './guards/auth.guard';
-import { DynamicFormExample3Component } from './pages/dynamic-form-example-3/dynamic-form-example-3.component';
-import { FormizableFormComponent } from './formizable/components/formizable-form/formizable-form.component';
 import { JsonPublicPipe } from './shared/pipes/json-public';
 import { EcoFabSpeedDialModule } from '@ecodev/fab-speed-dial';
-import { MatDynamicFormQuestionComponent } from './formizable/components/mat-dynamic-form-question/mat-dynamic-form-question.component';
 import { ProductService } from './services/product.service';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -61,20 +48,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductComponent,
     TemplateFormExampleComponent,
     ReactiveFormExampleComponent,
-    DynamicFormExampleComponent,
-    DynamicFormExample1Component,
-    DynamicFormExample2Component,
-    DynamicFormExample3Component,
-    // dynamic form question component
-    MatDynamicFormArrayComponent,
-    MatDynamicFormComponent,
-    MatDynamicFormGroupComponent,
-    MatDynamicFormQuestionComponent,
-    DynamicFormGeneratorComponent,
-    QuestionGeneratorComponent,
-    FormizableFormComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -106,8 +79,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         multi: true
     },
     ProductService,
-    QuestionControlService,
-    DynamicFormExampleService,
   ],
   bootstrap: [ AppComponent ]
 })

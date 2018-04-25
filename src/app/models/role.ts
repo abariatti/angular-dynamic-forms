@@ -1,6 +1,4 @@
-import { ISelectOption } from '../formizable/interface/iselect-option';
-
-export class Role implements ISelectOption {
+export class Role {
     constructor(
         public id: number,
         public role: string

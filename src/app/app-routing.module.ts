@@ -6,13 +6,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TemplateFormExampleComponent } from './pages/template-form-example/template-form-example.component';
 import { ReactiveFormExampleComponent } from './pages/reactive-form-example/reactive-form-example.component';
-import { DynamicFormExampleComponent } from './pages/dynamic-form-example/dynamic-form-example.component';
-import { DynamicFormExample2Component } from './pages/dynamic-form-example-2/dynamic-form-example-2.component';
-import { DynamicFormExample1Component } from './pages/dynamic-form-example-1/dynamic-form-example-1.component';
-import { DynamicFormGeneratorComponent } from './pages/dynamic-form-generator/dynamic-form-generator.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
-import { DynamicFormExample3Component } from './pages/dynamic-form-example-3/dynamic-form-example-3.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,11 +18,6 @@ const routes: Routes = [
   { path: 'products', component: ProductComponent, canActivate: [AuthGuard]  },
   { path: 'template-form-example', component: TemplateFormExampleComponent },
   { path: 'reactive-form-example', component: ReactiveFormExampleComponent },
-  { path: 'dynamic-form-example', component: DynamicFormExampleComponent },
-  { path: 'dynamic-form-example-1', component: DynamicFormExample1Component },
-  { path: 'dynamic-form-example-2', component: DynamicFormExample2Component },
-  { path: 'dynamic-form-example-3', component: DynamicFormExample3Component },
-  { path: 'dynamic-form-generator', component: DynamicFormGeneratorComponent },
 ];
 
 @NgModule({
