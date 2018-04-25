@@ -15,5 +15,5 @@ export class DropdownQuestion extends QuestionBase<string> {
 
 export interface DropdownQuestionOptions<T> extends QuestionBaseOptions<T> {
   options: ISelectOption[];
-  multiple: boolean;
+  multiple?: boolean;
 }
