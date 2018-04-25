@@ -31,45 +31,45 @@ export class DynamicFormFormizableComponent implements OnInit {
 
   onSubmit(obj: any) {
     switch (obj.constructor.name) {
-      case 'Place':
-        if (this.places.indexOf(obj) < 0) {
-          this.places.push(obj);
-        }
-        break;
-      case 'Mission':
-        if (this.missions.indexOf(obj) < 0) {
-          // not an edit must create
-          this.missions.push(obj);
-        }
-        break;
-      case 'Note':
-        if (this.notes.indexOf(obj) < 0) {
-          this.notes.push(obj);
-        }
-        break;
-      case 'Astronaute':
-        if (this.astronautes.indexOf(obj) < 0) {
-          this.astronautes.push(obj);
-        }
-        break;
+      // case 'Place':
+      //   if (this.places.indexOf(obj) < 0) {
+      //     this.places.push(obj);
+      //   }
+      //   break;
+      // case 'Mission':
+      //   if (this.missions.indexOf(obj) < 0) {
+      //     // not an edit must create
+      //     this.missions.push(obj);
+      //   }
+      //   break;
+      // case 'Note':
+      //   if (this.notes.indexOf(obj) < 0) {
+      //     this.notes.push(obj);
+      //   }
+      //   break;
+      // case 'Astronaute':
+      //   if (this.astronautes.indexOf(obj) < 0) {
+      //     this.astronautes.push(obj);
+      //   }
+      //   break;
     }
     this.createModel = undefined;
   }
 
   create(type: string) {
     switch (type) {
-      case 'place':
-        this.createModel = new Place();
-        break;
-      case 'mission':
-        this.createModel = new Mission();
-        break;
-      case 'note':
-        this.createModel = new Note();
-        break;
-      case 'astronaute':
-        this.createModel = new Astronaute();
-        break;
+      // case 'place':
+      //   this.createModel = new Place();
+      //   break;
+      // case 'mission':
+      //   this.createModel = new Mission();
+      //   break;
+      // case 'note':
+      //   this.createModel = new Note();
+      //   break;
+      // case 'astronaute':
+      //   this.createModel = new Astronaute();
+      //   break;
     }
   }
 

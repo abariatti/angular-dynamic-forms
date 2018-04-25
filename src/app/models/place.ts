@@ -13,24 +13,24 @@ export enum PlaceType {
   STAR,
 }
 
-export class Place extends FormizableBase {
+export class Place { // extends FormizableBase {
 
-  @FormizableProperty()
+  // @FormizableProperty()
   place: string;
 
-  @FormizableProperty({
-    options: [
-      { key: PlaceType.CITY, value: 'City' },
-      { key: PlaceType.COUNTRY, value: 'Country' },
-      { key: PlaceType.SPOT, value: 'Spot' },
-      { key: PlaceType.PLANET, value: 'Planet' },
-      { key: PlaceType.EXOPLANET, value: 'Exo Planet' },
-      { key: PlaceType.GALAXY, value: 'Galaxy' },
-      { key: PlaceType.STAR, value: 'Star' },
-    ],
-  })
+  // @FormizableProperty({
+  //   options: [
+  //     { key: PlaceType.CITY, value: 'City' },
+  //     { key: PlaceType.COUNTRY, value: 'Country' },
+  //     { key: PlaceType.SPOT, value: 'Spot' },
+  //     { key: PlaceType.PLANET, value: 'Planet' },
+  //     { key: PlaceType.EXOPLANET, value: 'Exo Planet' },
+  //     { key: PlaceType.GALAXY, value: 'Galaxy' },
+  //     { key: PlaceType.STAR, value: 'Star' },
+  //   ],
+  // })
   type: { key: PlaceType, value: string };
 
-  @FormizableProperty()
-  localization: Geo;
+  // @FormizableProperty()
+  // localization: Geo;
 }
