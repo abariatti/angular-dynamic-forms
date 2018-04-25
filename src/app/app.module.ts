@@ -26,14 +26,10 @@ import { DynamicFormExampleService } from './pages/dynamic-form-example/dynamic-
 import { DynamicFormExampleComponent } from './pages/dynamic-form-example/dynamic-form-example.component';
 import { MatDynamicFormComponent } from './formizable/components/mat-dynamic-form/mat-dynamic-form.component';
 import { QuestionControlService } from './formizable/question/question-control.service';
-import { DynamicFormExample2Component } from './pages/dynamic-form-example-2/dynamic-form-example-2.component';
-import { DynamicFormExample1Component } from './pages/dynamic-form-example-1/dynamic-form-example-1.component';
-import { DynamicFormGeneratorComponent } from './pages/dynamic-form-generator/dynamic-form-generator.component';
 import { HttpModule } from '@angular/http';
 import { AlertService } from './services/alert.service';
 import { AuthenticationService } from './services/authentication.service';
 import { LoginComponent } from './pages/login/login.component';
-import { QuestionGeneratorComponent } from './pages/dynamic-form-generator/question-generator/question-generator.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DynamicFormFormizableComponent } from './pages/dynamic-form-formizable/dynamic-form-formizable.component';
 import { FormizableFormComponent } from './formizable/components/formizable-form/formizable-form.component';
@@ -62,19 +58,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     TemplateFormExampleComponent,
     ReactiveFormExampleComponent,
     DynamicFormExampleComponent,
-    DynamicFormExample1Component,
-    DynamicFormExample2Component,
     DynamicFormFormizableComponent,
     // dynamic form question component
     MatDynamicFormArrayComponent,
     MatDynamicFormComponent,
     MatDynamicFormGroupComponent,
     MatDynamicFormQuestionComponent,
-    DynamicFormGeneratorComponent,
-    QuestionGeneratorComponent,
     FormizableFormComponent,
-
-
   ],
   imports: [
     BrowserModule,

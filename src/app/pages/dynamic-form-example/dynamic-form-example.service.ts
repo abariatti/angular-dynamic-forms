@@ -35,69 +35,25 @@ export class DynamicFormExampleService {
         validators: [Validators.email],
         validationMessage: 'Email is invalid'
       }),
-      new GroupQuestion({
-        key: 'group',
-        label: 'Test question group',
+      new TextboxQuestion({
+        key: 'mobile',
+        label: 'Please Enter your phone number',
         order: 3,
-        questions: [
-          new DropdownQuestion({
-            key: 'subrole',
-            required: true,
-            label: 'Please enter your sub role',
-            multiple: true,
-            options: [
-              { key: new Role(1, 'Buyer'), value: 'Buyer' },
-              { key: new Role(2, 'Seller'), value: 'Seller' },
-            ],
-            order: 1
-          }),
-          new TextboxQuestion({
-            key: 'submobile',
-            label: 'Please Enter your sub phone number',
-            order: 3,
-            validators: [phoneNumberValidator()],
-            validationMessage: 'Phone number should be in a swiss format'
-          }),
-          new GroupQuestion({
-            key: 'subgroup',
-            label: 'Test question sub group yahouuu',
-            order: 7,
-            questions: [
-              new DropdownQuestion({
-                key: 'subrole',
-                required: true,
-                label: 'Please enter your sub role',
-                multiple: true,
-                options: [
-                  { key: new Role(1, 'Buyer'), value: 'Buyer' },
-                  { key: new Role(2, 'Seller'), value: 'Seller' },
-                ],
-                order: 1
-              })
-            ]})
-        ]
+        validators: [phoneNumberValidator()],
+        validationMessage: 'Phone number should be in a swiss format'
       }),
 
-      // new TextboxQuestion({
-      //   key: 'mobile',
-      //   label: 'Please Enter your phone number',
-      //   type: 'text',
-      //   order: 3,
-      //   validators: [phoneNumberValidator()],
-      //   validationMessage: 'Phone number should be in a swiss format'
-      // }),
-
-      // new DropdownQuestion({
-      //   key: 'role',
-      //   required: true,
-      //   label: 'Please enter your role',
-      //   multiple: true,
-      //   options: [
-      //     { key: new Role(1, 'Buyer'), value: 'Buyer' },
-      //     { key: new Role(2, 'Seller'), value: 'Seller' },
-      //   ],
-      //   order: 4
-      // }),
+      new DropdownQuestion({
+        key: 'role',
+        required: true,
+        label: 'Please enter your role',
+        multiple: true,
+        options: [
+          { key: new Role(1, 'Buyer'), value: 'Buyer' },
+          { key: new Role(2, 'Seller'), value: 'Seller' },
+        ],
+        order: 4
+      }),
 
       // new ToggleQuestion({
       //   key: 'newsletter',
