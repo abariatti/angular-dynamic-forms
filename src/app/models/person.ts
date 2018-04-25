@@ -12,8 +12,9 @@ export class Person extends FormizableBase {
 
   @FormizableProperty({
     options: [
-      new Role(1, 'Static Role 1'),
-      new Role(2, 'Static Role 2'),
+      new Role(1, 'Captain'),
+      new Role(2, 'Lieutenant'),
+      new Role(3, 'Caporal'),
     ],
   })
   public roleWithStaticOptions: Role;
@@ -35,8 +36,9 @@ export class Person extends FormizableBase {
   // example with method
   public availableRolesMethod(): Role[] {
     return [
-      new Role(1, 'role from method 1'),
-      new Role(2, 'role from method 2')
+      new Role(1, 'Captain'),
+      new Role(2, 'Lieutenant'),
+      new Role(3, 'Caporal'),
     ];
   }
 

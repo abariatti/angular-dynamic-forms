@@ -33,10 +33,10 @@
           <span class="header-spacer"></span>
           <mat-icon>person</mat-icon>
         </h3>
-        <mat-list-item *ngFor="let expense of expenses">
-          <mat-icon mat-list-icon> </mat-icon>
-          <h4 mat-line>{{expense.name}}</h4>
-          <p mat-line> {{expense.updated | date}} </p>
+        <mat-list-item *ngFor="let astro of astronautes" (click)="edit(astro)">
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4 mat-line>{{astro.name}}</h4>
+          <p mat-line> {{astro.surname}} </p>
         </mat-list-item>
         <mat-divider></mat-divider>
 
