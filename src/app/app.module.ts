@@ -19,23 +19,13 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AboutComponent } from './pages/about/about.component';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TemplateFormExampleComponent } from './pages/template-form-example/template-form-example.component';
 import { PhoneNumberValidatorDirective } from './shared/validators/phone-number.directive';
-import { ReactiveFormExampleComponent } from './pages/reactive-form-example/reactive-form-example.component';
-import { DynamicFormExampleService } from './pages/dynamic-form-example/dynamic-form-example.service';
-import { DynamicFormExampleComponent } from './pages/dynamic-form-example/dynamic-form-example.component';
 import { MatDynamicFormComponent } from './formizable/components/mat-dynamic-form/mat-dynamic-form.component';
-import { QuestionControlService } from './formizable/question/question-control.service';
-import { DynamicFormExample2Component } from './pages/dynamic-form-example-2/dynamic-form-example-2.component';
-import { DynamicFormExample1Component } from './pages/dynamic-form-example-1/dynamic-form-example-1.component';
-import { DynamicFormGeneratorComponent } from './pages/dynamic-form-generator/dynamic-form-generator.component';
 import { HttpModule } from '@angular/http';
 import { AlertService } from './services/alert.service';
 import { AuthenticationService } from './services/authentication.service';
 import { LoginComponent } from './pages/login/login.component';
-import { QuestionGeneratorComponent } from './pages/dynamic-form-generator/question-generator/question-generator.component';
 import { AuthGuard } from './guards/auth.guard';
-import { DynamicFormExample3Component } from './pages/dynamic-form-example-3/dynamic-form-example-3.component';
 import { FormizableFormComponent } from './formizable/components/formizable-form/formizable-form.component';
 import { JsonPublicPipe } from './shared/pipes/json-public';
 import { EcoFabSpeedDialModule } from '@ecodev/fab-speed-dial';
@@ -59,22 +49,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfileComponent,
     AboutComponent,
     ProductComponent,
-    TemplateFormExampleComponent,
-    ReactiveFormExampleComponent,
-    DynamicFormExampleComponent,
-    DynamicFormExample1Component,
-    DynamicFormExample2Component,
-    DynamicFormExample3Component,
-    // dynamic form question component
-    MatDynamicFormArrayComponent,
-    MatDynamicFormComponent,
-    MatDynamicFormGroupComponent,
-    MatDynamicFormQuestionComponent,
-    DynamicFormGeneratorComponent,
-    QuestionGeneratorComponent,
-    FormizableFormComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -106,8 +80,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         multi: true
     },
     ProductService,
-    QuestionControlService,
-    DynamicFormExampleService,
   ],
   bootstrap: [ AppComponent ]
 })
